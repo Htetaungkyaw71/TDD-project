@@ -25,4 +25,19 @@ describe "Test For Solver Class" do
             expect(tdd.reverse("suzana")).to eq "anazus"
         end
     end
+
+    describe "#fizzbuzz" do
+    it "Test with divisible by 3" do
+        expect(tdd.fizzbuzz(6)).to eq "fizz"
+    end
+    it "Test with divisible by 5" do
+        expect(tdd.fizzbuzz(10)).to eq "buzz"
+    end
+    it "Test with divisible by 5 and 3" do
+        expect(tdd.fizzbuzz(15)).to eq "fizzbuzz"
+    end
+    it "Test with other cases" do
+        expect(tdd.fizzbuzz(7)).to eq "7"
+    end
+end
 end
