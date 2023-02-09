@@ -1,27 +1,27 @@
 class Solver
-    def factorial(n)
-        if n == 0 or n == 1
-            1
-        elsif n < 0 
-            raise "please enter postive number"
-        else
-            n * factorial(n - 1)
-        end
+  def factorial(num)
+    if [0, 1].include?(num)
+      1
+    elsif num.negative?
+      raise 'please enter postive number'
+    else
+      num * factorial(num - 1)
     end
+  end
 
-    def reverse(str)
-        str.reverse
-    end
+  def reverse(str)
+    str.reverse
+  end
 
-    def fizzbuzz(num)
-        if num % 3 == 0 && num % 5 == 0 
-            "fizzbuzz"
-        elsif num % 3 == 0
-            "fizz"
-        elsif num % 5 == 0
-            "buzz" 
-        else
-            num.to_s
-        end
+  def fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
+      'fizzbuzz'
+    elsif (num % 3).zero?
+      'fizz'
+    elsif (num % 5).zero?
+      'buzz'
+    else
+      num.to_s
     end
-end 
+  end
+end
